@@ -1,0 +1,38 @@
+@use '../../styles/fonts';
+@use '../../styles/pallete';
+@use '../../styles/spacing';
+
+.InputForm {
+    position: relative;
+    width: 100%;
+
+    .InputForm-input {
+        background-color: pallete.$primary-lighter;
+        border: none;
+        border-radius: 4px;
+        box-sizing: border-box;
+        color: pallete.$black;
+        font-family: fonts.$family-primary;
+        padding: spacing.$spacing-16 spacing.$spacing-12;
+        width: 100%;
+
+        &::placeholder {
+            color: pallete.$primary-light;
+            font-family: fonts.$family-primary;
+            font-size: fonts.$size-14;
+            font-weight: fonts.$weight-400;
+        }
+
+        &:focus {
+            outline: 1px solid pallete.$primary-light;
+        }
+    }
+
+    .InputForm-label {
+        color: pallete.$black;
+        font-family: fonts.$family-primary;
+        font-weight: fonts.$weight-500;
+        font-size: fonts.$size-12;
+        line-height: fonts.$line-height-20;
+    }
+}

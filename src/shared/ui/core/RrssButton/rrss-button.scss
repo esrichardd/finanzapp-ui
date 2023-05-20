@@ -1,0 +1,42 @@
+@use '../../styles/fonts';
+@use '../../styles/pallete';
+@use '../../styles/spacing';
+
+$rrss: (
+    'google': pallete.$google,
+    'facebook': pallete.$facebook,
+);
+
+.RrssButton-button {
+    align-items: center;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: pallete.$white;
+    cursor: pointer;
+    display: flex;
+    font-size: fonts.$size-14;
+    font-family: fonts.$family-primary;
+    font-weight: fonts.$weight-500;
+    height: 40px;
+    justify-content: left;
+    line-height: fonts.$line-height-18;
+    padding: 0 spacing.$spacing-16;
+    text-align: left;
+    text-decoration: none;
+    width: 100%;
+
+    @each $key, $value in $rrss {
+        &.RrssButton-button-#{$key} {
+            background-color: $value;
+
+            .RrssButton-button-#{$key}-icon {
+                position: relative;
+                box-sizing: border-box;
+                justify-content: center;
+                margin-right: spacing.$spacing-8;
+                width: spacing.$spacing-20;
+                height: spacing.$spacing-20;
+            }
+        }
+    }
+}

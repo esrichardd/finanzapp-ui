@@ -1,0 +1,83 @@
+@use '../../styles/fonts';
+@use '../../styles/pallete';
+
+$colors: (
+    'primary': pallete.$primary,
+    'primary-light': pallete.$primary-light,
+    'primary-dark': pallete.$primary-dark,
+    'danger': pallete.$danger,
+    'black': pallete.$black,
+    'white': pallete.$white,
+);
+
+$aligns: (
+    'left': left,
+    'center': center,
+    'right': right,
+    'justify': justify,
+);
+
+$size: (
+    '10': fonts.$size-10,
+    '12': fonts.$size-12,
+    '14': fonts.$size-14,
+    '16': fonts.$size-16,
+    '18': fonts.$size-18,
+    '20': fonts.$size-20,
+    '24': fonts.$size-24,
+    '27': fonts.$size-27,
+    '28': fonts.$size-28,
+    '32': fonts.$size-32,
+);
+
+$weight: (
+    '400': fonts.$weight-400,
+    '500': fonts.$weight-500,
+    '600': fonts.$weight-600,
+    '700': fonts.$weight-700,
+);
+
+$families: (
+    'primary': fonts.$family-primary,
+    'secondary': fonts.$family-secondary,
+);
+
+.Typography {
+    color: pallete.$black;
+    font-size: fonts.$size-16;
+    font-weight: fonts.$weight-400;
+    font-family: fonts.$family-primary;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+
+    @each $key, $value in $colors {
+        &.Typography-#{$key} {
+            color: $value;
+        }
+    }
+
+    @each $key, $value in $aligns {
+        &.Typography-#{$key} {
+            text-align: $value;
+        }
+    }
+
+    @each $key, $value in $size {
+        &.Typography-#{$key} {
+            font-size: $value;
+        }
+    }
+
+    @each $key, $value in $weight {
+        &.Typography-#{$key} {
+            font-weight: $value;
+        }
+    }
+
+    @each $key, $value in $families {
+        &.Typography-#{$key} {
+            font-family: $value;
+        }
+    }
+}

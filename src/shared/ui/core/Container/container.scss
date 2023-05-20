@@ -1,0 +1,81 @@
+@use '../../styles/fonts';
+@use '../../styles/pallete';
+@use '../../styles/spacing';
+
+$cols: (
+    '1': 1,
+    '2': 2,
+    '3': 3,
+    '4': 4,
+);
+
+$gap: (
+    '0': 0px,
+    '4': spacing.$spacing-4,
+    '8': spacing.$spacing-8,
+    '12': spacing.$spacing-12,
+    '16': spacing.$spacing-16,
+    '18': spacing.$spacing-18,
+    '20': spacing.$spacing-20,
+    '24': spacing.$spacing-24,
+    '28': spacing.$spacing-28,
+    '32': spacing.$spacing-32,
+    '36': spacing.$spacing-36,
+    '40': spacing.$spacing-40,
+    '44': spacing.$spacing-44,
+    '48': spacing.$spacing-48,
+);
+
+$justify: (
+    'start': flex-start,
+    'end': flex-end,
+    'center': center,
+    'between': space-between,
+    'around': space-around,
+    'evenly': space-evenly,
+);
+
+$position: (
+    'column': column,
+    'row': row,
+);
+
+.Container {
+    width: 85%;
+    margin: 0 auto;
+
+    @each $key, $value in $cols {
+        &.Container-cols-#{$key} {
+            display: grid;
+            grid-template-columns: repeat(#{$value}, 1fr);
+        }
+    }
+
+    @each $key, $value in $gap {
+        @each $key2, $value2 in $gap {
+            &.Container-spacing-#{$key}-#{$key2} {
+                padding: #{$value} #{$value2};
+            }
+
+            &.Container-gap-#{$key}-#{$key2} {
+                row-gap: #{$value2};
+                column-gap: #{$value};
+            }
+        }
+
+        &.Container-spacing-bottom-#{$key} {
+            padding-bottom: #{$value};
+        }
+    }
+
+    @each $key1, $value1 in $position {
+        @each $key2, $value2 in $justify {
+            &.Container-flex-#{$key1}-#{$key2} {
+                display: flex;
+                flex-direction: #{$value1};
+                align-items: center;
+                justify-content: #{$value2};
+            }
+        }
+    }
+}

@@ -1,0 +1,38 @@
+@use '../../styles/fonts';
+@use '../../styles/pallete';
+@use '../../styles/spacing';
+
+$colors: (
+    'primary': pallete.$primary,
+    'primary-light': pallete.$primary-light,
+    'primary-dark': pallete.$primary-dark,
+    'danger': pallete.$danger,
+    'black': pallete.$black,
+    'white': pallete.$white,
+);
+
+.ActionButton-button {
+    align-items: center;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: pallete.$white;
+    cursor: pointer;
+    display: flex;
+    font-size: fonts.$size-14;
+    font-family: fonts.$family-primary;
+    font-weight: fonts.$weight-500;
+    height: 40px;
+    justify-content: center;
+    line-height: fonts.$line-height-18;
+    padding: 0 spacing.$spacing-16;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+    border-radius: 50px;
+
+    @each $key, $value in $colors {
+        &.ActionButton-button-#{$key} {
+            background-color: $value;
+        }
+    }
+}
