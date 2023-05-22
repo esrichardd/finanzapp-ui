@@ -1,6 +1,6 @@
-import { RrssButtonProps } from '@/shared/utils/core/types/rrss-button'
-import './rrss-button.scss'
 import Image from 'next/image'
+import { RrssButtonProps } from '@/shared/utils/core/types'
+import './rrss-button.scss'
 
 export function RrssButton({ text, type, social, className = '' }: RrssButtonProps) {
     return (

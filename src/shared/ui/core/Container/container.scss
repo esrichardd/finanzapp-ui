@@ -44,32 +44,45 @@ $position: (
     width: 85%;
     margin: 0 auto;
 
-    @each $key, $value in $cols {
-        &.Container-cols-#{$key} {
+    @each $key,
+    $value in $cols {
+
+        &.Container-cols-#{$key},
+        &.Container-cols-#{$key} form {
             display: grid;
             grid-template-columns: repeat(#{$value}, 1fr);
         }
     }
 
-    @each $key, $value in $gap {
-        @each $key2, $value2 in $gap {
-            &.Container-spacing-#{$key}-#{$key2} {
+    @each $key,
+    $value in $gap {
+
+        @each $key2,
+        $value2 in $gap {
+
+            &.Container-spacing-#{$key}-#{$key2},
+            &.Container-spacing-#{$key}-#{$key2} form {
                 padding: #{$value} #{$value2};
             }
 
-            &.Container-gap-#{$key}-#{$key2} {
+            &.Container-gap-#{$key}-#{$key2},
+            &.Container-gap-#{$key}-#{$key2} form {
                 row-gap: #{$value2};
                 column-gap: #{$value};
             }
         }
 
-        &.Container-spacing-bottom-#{$key} {
+        &.Container-spacing-bottom-#{$key},
+        &.Container-spacing-bottom-#{$key} form {
             padding-bottom: #{$value};
         }
     }
 
-    @each $key1, $value1 in $position {
-        @each $key2, $value2 in $justify {
+    @each $key1,
+    $value1 in $position {
+
+        @each $key2,
+        $value2 in $justify {
             &.Container-flex-#{$key1}-#{$key2} {
                 display: flex;
                 flex-direction: #{$value1};
@@ -77,5 +90,9 @@ $position: (
                 justify-content: #{$value2};
             }
         }
+    }
+
+    &-full-width {
+        width: 100%;
     }
 }

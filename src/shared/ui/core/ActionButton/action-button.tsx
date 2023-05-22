@@ -1,4 +1,4 @@
-import { ActionButtonProps } from '@/shared/utils/core/types/action-button'
+import { ActionButtonProps } from '@/shared/utils/core/types'
 import './action-button.scss'
 
 export function ActionButton({ text, color, type, className = '' }: ActionButtonProps) {

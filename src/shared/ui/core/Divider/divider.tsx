@@ -1,4 +1,4 @@
-import { DividerProps } from '@/shared/utils/core/types/divider'
+import { DividerProps } from '@/shared/utils/core/types'
 import './divider.scss'
 export function Divider({ spacing, spacingBottom, borderWidth = 1, borderHeight = 100 }: DividerProps) {
     return (
