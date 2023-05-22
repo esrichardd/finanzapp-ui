@@ -1,11 +1,4 @@
-import {
-    ActionLink,
-    Container,
-    Divider,
-    LogoImage,
-    RrssButton,
-    Typography,
-} from '@/shared/ui/core'
+import { ActionLink, Container, Divider, LogoImage, RrssButton, Typography } from '@/shared/ui/core'
 import { AuthActionForm } from './form/form'
 
 export function AuthController() {

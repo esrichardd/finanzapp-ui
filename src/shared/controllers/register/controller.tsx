@@ -1,9 +1,4 @@
-import {
-    ActionLink,
-    Container,
-    LogoImage,
-    Typography,
-} from '@/shared/ui/core'
+import { ActionLink, Container, LogoImage, Typography } from '@/shared/ui/core'
 import { RegisterActionForm } from './form/form'
 
 export function RegisterController() {

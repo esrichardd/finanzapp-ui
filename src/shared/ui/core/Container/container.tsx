@@ -17,8 +17,11 @@ export function Container({
     return (
         <>
             <div
-                className={`Container Container-cols-${cols} Container-spacing-${spacingHeight}-${spacingWidth} Container-gap-${gapCol}-${gapRow} ${spacingBotton ? `Container-spacing-bottom-${spacingBotton}` : ''
-                    } ${justify ? `Container-flex-${direction}-${justify}` : ''} ${fullWidth ? 'Container-full-width' : ''} ${className}`}
+                className={`Container Container-cols-${cols} Container-spacing-${spacingHeight}-${spacingWidth} Container-gap-${gapCol}-${gapRow} ${
+                    spacingBotton ? `Container-spacing-bottom-${spacingBotton}` : ''
+                } ${justify ? `Container-flex-${direction}-${justify}` : ''} ${
+                    fullWidth ? 'Container-full-width' : ''
+                } ${className}`}
             >
                 {children}
             </div>

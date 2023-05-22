@@ -1,4 +1,4 @@
-import { Container } from "../../core";
+import { Container } from '../../core'
 
 import './header.scss'
 export function HeaderComponent() {
