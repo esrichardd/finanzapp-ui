@@ -1,16 +1,7 @@
-import {
-    ActionButton,
-    ActionLink,
-    Container,
-    Divider,
-    InputForm,
-    LogoImage,
-    RrssButton,
-    Typography,
-} from '@/shared/ui/core'
-import './auth-controller.scss'
+import { ActionLink, Container, Divider, LogoImage, RrssButton, Typography } from '@/shared/ui/core'
+import { AuthActionForm } from './form/form'
 
-export default function AuthController() {
+export function AuthController() {
     return (
         <>
             <Container>
@@ -30,13 +21,11 @@ export default function AuthController() {
                     <RrssButton type="button" text="Login with Facebook" social="facebook" />
                 </Container>
                 <Container spacingBotton={12} gapRow={12}>
-                    <InputForm type="email" placeholder="Email" />
-                    <InputForm type="text" placeholder="Password" />
-                    <ActionButton text="Sign in" color="primary" type="button" />
+                    <AuthActionForm />
                 </Container>
                 <Container justify="center">
                     <ActionLink
-                        href="/auth"
+                        href="/accounts"
                         text="Did you forget your password?"
                         size="12"
                         align="center"
@@ -45,7 +34,7 @@ export default function AuthController() {
                     />
                     <Divider borderHeight={70} spacing={4} />
                     <ActionLink
-                        href="/auth"
+                        href="/auth/register"
                         text="Sign up for free by clicking here!"
                         size="12"
                         align="center"

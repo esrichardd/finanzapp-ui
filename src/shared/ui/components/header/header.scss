@@ -1,0 +1,6 @@
+@use '../../styles/pallete';
+@use '../../styles/spacing';
+
+.Container-header {
+    border-bottom: 1px solid pallete.$gray;
+}

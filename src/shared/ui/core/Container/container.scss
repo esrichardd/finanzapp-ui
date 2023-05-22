@@ -45,7 +45,8 @@ $position: (
     margin: 0 auto;
 
     @each $key, $value in $cols {
-        &.Container-cols-#{$key} {
+        &.Container-cols-#{$key},
+        &.Container-cols-#{$key} form {
             display: grid;
             grid-template-columns: repeat(#{$value}, 1fr);
         }
@@ -53,17 +54,20 @@ $position: (
 
     @each $key, $value in $gap {
         @each $key2, $value2 in $gap {
-            &.Container-spacing-#{$key}-#{$key2} {
+            &.Container-spacing-#{$key}-#{$key2},
+            &.Container-spacing-#{$key}-#{$key2} form {
                 padding: #{$value} #{$value2};
             }
 
-            &.Container-gap-#{$key}-#{$key2} {
+            &.Container-gap-#{$key}-#{$key2},
+            &.Container-gap-#{$key}-#{$key2} form {
                 row-gap: #{$value2};
                 column-gap: #{$value};
             }
         }
 
-        &.Container-spacing-bottom-#{$key} {
+        &.Container-spacing-bottom-#{$key},
+        &.Container-spacing-bottom-#{$key} form {
             padding-bottom: #{$value};
         }
     }
@@ -77,5 +81,9 @@ $position: (
                 justify-content: #{$value2};
             }
         }
+    }
+
+    &-full-width {
+        width: 100%;
     }
 }

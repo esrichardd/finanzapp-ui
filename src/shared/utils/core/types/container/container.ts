@@ -6,6 +6,7 @@ export type ContainerProps = PropsWithChildren<{
     spacingHeight?: number
     spacingBotton?: number
     spacingWidth?: number
+    fullWidth?: boolean
     gapCol?: number
     gapRow?: number
     direction?: 'column' | 'row'

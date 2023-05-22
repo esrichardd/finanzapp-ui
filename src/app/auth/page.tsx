@@ -1,3 +1,3 @@
-import AuthController from '@/shared/controllers/auth/auth-controller'
+import { AuthController } from '@/shared/controllers/auth'
 
 export default AuthController

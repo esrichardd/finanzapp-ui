@@ -1,7 +1,7 @@
 import Link from 'next/link'
-import './action-link.scss'
+import { ActionLinkProps } from '@/shared/utils/core/types'
 import { Typography } from '../Typography'
-import { ActionLinkProps } from '@/shared/utils/core/types/action-link'
+import './action-link.scss'
 
 export function ActionLink(props: ActionLinkProps) {
     const { href } = props

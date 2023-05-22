@@ -1,4 +1,4 @@
-import { TypographyProps } from '@/shared/utils/core/types/typography'
+import { TypographyProps } from '@/shared/utils/core/types'
 import './typography.scss'
 
 export function Typography({ text, color, variant, className, align, size, weight }: TypographyProps) {
