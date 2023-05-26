@@ -43,6 +43,7 @@ $position: (
 .Container {
     width: 85%;
     margin: 0 auto;
+    box-sizing: border-box;
 
     @each $key, $value in $cols {
         &.Container-cols-#{$key},
