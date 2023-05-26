@@ -13,13 +13,14 @@
         box-sizing: border-box;
         color: pallete.$black;
         font-family: fonts.$family-primary;
+        font-size: fonts.$size-16;
         padding: spacing.$spacing-16 spacing.$spacing-12;
         width: 100%;
 
         &::placeholder {
             color: pallete.$primary-light;
             font-family: fonts.$family-primary;
-            font-size: fonts.$size-14;
+            font-size: fonts.$size-16;
             font-weight: fonts.$weight-400;
         }
 
