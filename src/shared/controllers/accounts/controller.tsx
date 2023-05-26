@@ -1,6 +1,5 @@
-import { getServerSession } from 'next-auth/next'
 import { redirect } from 'next/navigation'
-
+import { getServerSession } from 'next-auth/next'
 import { HeaderComponent } from '@/shared/ui/components'
 import { ActionButton, Container, LogoImage } from '@/shared/ui/core'
 

@@ -14,7 +14,7 @@ export function ActionButton({
 }: ActionButtonProps) {
     return (
         <button
-            onClick={() => handleClick && handleClick()}
+            onClick={() => handleClick?.()}
             className={`ActionButton-button ActionButton-button-${color} ${
                 loading ? 'ActionButton-button-loading' : ''
             } ${className}`}

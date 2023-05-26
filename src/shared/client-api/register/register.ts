@@ -26,8 +26,8 @@ export async function handlerRegister(request: NextRequest) {
 }
 
 export async function googleRegister(profile: Profile) {
-    const isValid = await validateEmail(profile.email as string)
-    if (!isValid) return true
+    const emailExists = await validateEmail(profile.email as string)
+    if (emailExists) return false
     await saveDocument('users', {
         name: profile.name,
         email: profile.email,
