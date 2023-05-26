@@ -7,7 +7,7 @@ import { useState } from 'react'
 export function RegisterActionForm() {
     const [values, setValues] = useState({ email: '', password: '' })
     const [loading, setLoading] = useState(false)
-    const router = useRouter();
+    const router = useRouter()
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         setLoading(true)
         e.preventDefault()

@@ -41,8 +41,7 @@ $colors: (
         opacity: 0.5;
     }
 
-    @each $key,
-    $value in $colors {
+    @each $key, $value in $colors {
         &.ActionButton-button-#{$key} {
             background-color: $value;
         }

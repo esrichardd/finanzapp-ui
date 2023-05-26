@@ -13,7 +13,7 @@ export function AuthActionForm() {
         e.preventDefault()
         signIn('credentials', { email: values.email, password: values.password, redirect: false })
             .then((res) => {
-                if (!res || res.error) throw new Error("incorrect credentials");
+                if (!res || res.error) throw new Error('incorrect credentials')
                 router.push('/accounts')
             })
             .catch((err) => {
