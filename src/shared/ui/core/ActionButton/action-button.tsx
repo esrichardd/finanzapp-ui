@@ -12,5 +12,16 @@ export function ActionButton({
     disabled = false,
     className = '',
 }: ActionButtonProps) {
-    return <button onClick={() => handleClick?.()}>{loading ? <LoadingSpinner /> : text}</button>
+    return (
+        <button
+            onClick={() => handleClick?.()}
+            className={`ActionButton-button ActionButton-button-${color} ${
+                loading ? 'ActionButton-button-loading' : ''
+            } ${className}`}
+            type={type}
+            disabled={disabled}
+        >
+            {loading ? <LoadingSpinner /> : text}
+        </button>
+    )
 }
