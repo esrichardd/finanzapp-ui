@@ -21,7 +21,7 @@ export function RegisterController() {
                 </Container>
                 <Container justify="center">
                     <ActionLink
-                        href="/auth"
+                        href="/login"
                         text="Do you have an account? Log in now!"
                         size="12"
                         align="center"

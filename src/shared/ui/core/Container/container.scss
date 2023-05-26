@@ -43,8 +43,11 @@ $position: (
 .Container {
     width: 85%;
     margin: 0 auto;
+    box-sizing: border-box;
 
-    @each $key, $value in $cols {
+    @each $key,
+    $value in $cols {
+
         &.Container-cols-#{$key},
         &.Container-cols-#{$key} form {
             display: grid;
@@ -52,8 +55,12 @@ $position: (
         }
     }
 
-    @each $key, $value in $gap {
-        @each $key2, $value2 in $gap {
+    @each $key,
+    $value in $gap {
+
+        @each $key2,
+        $value2 in $gap {
+
             &.Container-spacing-#{$key}-#{$key2},
             &.Container-spacing-#{$key}-#{$key2} form {
                 padding: #{$value} #{$value2};
@@ -72,8 +79,11 @@ $position: (
         }
     }
 
-    @each $key1, $value1 in $position {
-        @each $key2, $value2 in $justify {
+    @each $key1,
+    $value1 in $position {
+
+        @each $key2,
+        $value2 in $justify {
             &.Container-flex-#{$key1}-#{$key2} {
                 display: flex;
                 flex-direction: #{$value1};

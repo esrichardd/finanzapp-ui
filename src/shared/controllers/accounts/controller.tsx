@@ -1,7 +1,15 @@
-import { HeaderComponent } from '@/shared/ui/components'
-import { ActionButton, ActionLink, Container, LogoImage } from '@/shared/ui/core'
+import { getServerSession } from 'next-auth/next'
+import { redirect } from 'next/navigation'
 
-export default function AccountsController() {
+import { HeaderComponent } from '@/shared/ui/components'
+import { ActionButton, Container, LogoImage } from '@/shared/ui/core'
+
+export default async function AccountsController() {
+    const session = await getServerSession()
+    if (!session) {
+        redirect('/login')
+    }
+
     return (
         <>
             <HeaderComponent />
@@ -11,7 +19,6 @@ export default function AccountsController() {
             <Container justify="center" gapRow={12}>
                 <ActionButton color="primary" text="ADD INCOME" type="button" />
                 <ActionButton color="danger" text="ADD EXPENSE" type="button" />
-                <ActionLink text="return" href="/auth" />
             </Container>
         </>
     )

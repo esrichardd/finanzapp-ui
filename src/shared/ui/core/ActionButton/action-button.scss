@@ -29,8 +29,20 @@ $colors: (
     text-decoration: none;
     width: 100%;
     border-radius: 50px;
+    transition: all 0.2s ease-in-out;
 
-    @each $key, $value in $colors {
+    &:hover {
+        opacity: 0.9;
+        transition: all 0.2s ease-in-out;
+    }
+
+    &-loading {
+        cursor: not-allowed;
+        opacity: 0.5;
+    }
+
+    @each $key,
+    $value in $colors {
         &.ActionButton-button-#{$key} {
             background-color: $value;
         }
