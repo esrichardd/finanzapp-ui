@@ -1,3 +1,3 @@
-import { RegisterController } from '@/shared/controllers/register'
+import { RegisterController } from '@/libs/controllers/register'
 
 export default RegisterController

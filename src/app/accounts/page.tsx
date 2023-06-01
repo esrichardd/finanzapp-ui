@@ -1,3 +1,3 @@
-import AccountsController from '@/shared/controllers/accounts/controller'
+import AccountsController from '@/libs/controllers/accounts/controller'
 
 export default AccountsController
