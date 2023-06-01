@@ -13,7 +13,7 @@ class RestAPI {
     private responseHandler: ResponseHandler
 
     private constructor(baseURL?: string) {
-        this.baseURL = baseURL || '/api'
+        this.baseURL = baseURL ?? '/api'
         this.responseHandler = ResponseHandler.getInstance()
     }
 

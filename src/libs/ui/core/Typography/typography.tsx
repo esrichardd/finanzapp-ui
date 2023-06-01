@@ -10,7 +10,7 @@ export function Typography({
     weight = 'regular',
     className = '',
 }: TypographyProps) {
-    const Tag = variant || 'p'
+    const Tag = variant ?? 'p'
 
     return (
         <Tag

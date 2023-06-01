@@ -15,7 +15,7 @@ export function InputForm({ type, name, label, placeholder, value, className, on
                 aria-label={label}
                 placeholder={placeholder}
                 value={value}
-                onChange={(e) => onChange && onChange(e)}
+                onChange={(e) => onChange?.(e)}
                 className={`InputForm-input ${className}`}
             />
         </div>
