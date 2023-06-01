@@ -1,4 +1,4 @@
-import { NextAuthProvider } from '@/shared/providers'
+import { NextAuthProvider } from '@/libs/providers'
 
 export const metadata = {
     manifest: '/manifest.json',

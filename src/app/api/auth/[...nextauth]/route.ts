@@ -1,8 +1,8 @@
 import NextAuth from 'next-auth'
 import GoogleProvider from 'next-auth/providers/google'
 import CredentialsProvider from 'next-auth/providers/credentials'
-import { validate } from '@/shared/utils/auth-validation'
-import { googleRegister } from '@/shared/client-api/register/register'
+import { validate } from '@/libs/utils/auth-validation'
+import { googleRegister } from '@/libs/client-api/register/register'
 
 const handler = NextAuth({
     callbacks: {

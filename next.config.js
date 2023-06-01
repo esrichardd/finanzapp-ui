@@ -29,9 +29,15 @@ const generateAppDirEntry = (entry) => {
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     reactStrictMode: true,
-    webpack: (config) => {
+    webpack: (config, { isServer }) => {
         const entry = generateAppDirEntry(config.entry)
         config.entry = () => entry
+
+        if (!isServer) {
+            config.resolve.fallback = {
+                fs: false,
+            }
+        }
 
         return config
     },
