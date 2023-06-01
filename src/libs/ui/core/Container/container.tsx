@@ -21,7 +21,7 @@ export function Container({
         spacingBottom && `Container-spacing-bottom-${spacingBottom}`,
         justify && `Container-flex-${direction}-${justify}`,
         fullWidth && 'Container-full-width',
-        className && className,
+        className && `${className}`,
     ]
         .filter(Boolean)
         .join(' ')
